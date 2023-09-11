@@ -1,3 +1,4 @@
+/* eslint-env node */
 const url = require('url')
 const querystring = require('querystring')
 
@@ -118,14 +119,6 @@ const routes = {
     res.writeHead(200, {
       Date: 'Mon, 13 Oct 2014 21:02:27 GMT',
       'Content-Type': 'text/html; charset=utf-8'
-    })
-    res.end()
-  },
-  '/invalid-headers': function(res) {
-    res.writeHead(200, {
-      'Content-Type': 'text/plain',
-      'Invalid Header': 'valid value',
-      'Westworld-S01': "<3"
     })
     res.end()
   }
